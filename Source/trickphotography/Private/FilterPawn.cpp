@@ -17,7 +17,7 @@ void AFilterPawn::OnAnyPhoto_Implementation()
 	for (UActorComponent *component : FilterableComponents)
 	{
 		IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-		if (filterableComponent)
+		if (filterableComponent != nullptr)
 		{
 			filterableComponent->Execute_OnAnyPhoto(Cast<UObject>(filterableComponent));
 		}
@@ -28,7 +28,7 @@ void AFilterPawn::OnAnyPhotoFinished_Implementation()
 	for (UActorComponent *component : FilterableComponents)
 	{
 		IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-		if (filterableComponent)
+		if (filterableComponent != nullptr)
 		{
 			filterableComponent->Execute_OnAnyPhotoFinished(Cast<UObject>(filterableComponent));
 		}
@@ -41,7 +41,7 @@ void AFilterPawn::OnThermalPhoto_Implementation()
 	for (UActorComponent *component : FilterableComponents)
 	{
 		IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-		if (filterableComponent)
+		if (filterableComponent != nullptr)
 		{
 			filterableComponent->Execute_OnThermalPhoto(Cast<UObject>(filterableComponent));
 		}
@@ -52,7 +52,7 @@ void AFilterPawn::OnThermalPhotoFinished_Implementation()
 	for (UActorComponent *component : FilterableComponents)
 	{
 		IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-		if (filterableComponent)
+		if (filterableComponent != nullptr)
 		{
 			filterableComponent->Execute_OnThermalPhotoFinished(Cast<UObject>(filterableComponent));
 		}
@@ -65,7 +65,7 @@ void AFilterPawn::OnUVPhoto_Implementation()
 	for (UActorComponent *component : FilterableComponents)
 	{
 		IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-		if (filterableComponent)
+		if (filterableComponent != nullptr)
 		{
 			filterableComponent->Execute_OnUVPhoto(Cast<UObject>(filterableComponent));
 		}
@@ -76,7 +76,7 @@ void AFilterPawn::OnUVPhotoFinished_Implementation()
 	for (UActorComponent *component : FilterableComponents)
 	{
 		IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-		if (filterableComponent)
+		if (filterableComponent != nullptr)
 		{
 			filterableComponent->Execute_OnUVPhotoFinished(Cast<UObject>(filterableComponent));
 		}
@@ -89,7 +89,7 @@ void AFilterPawn::OnXrayPhoto_Implementation()
 	for (UActorComponent *component : FilterableComponents)
 	{
 		IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-		if (filterableComponent)
+		if (filterableComponent != nullptr)
 		{
 			filterableComponent->Execute_OnXrayPhoto(Cast<UObject>(filterableComponent));
 		}
@@ -100,7 +100,7 @@ void AFilterPawn::OnXrayPhotoFinished_Implementation()
 	for (UActorComponent *component : FilterableComponents)
 	{
 		IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-		if (filterableComponent)
+		if (filterableComponent != nullptr)
 		{
 			filterableComponent->Execute_OnXrayPhotoFinished(Cast<UObject>(filterableComponent));
 		}
@@ -115,7 +115,7 @@ void AFilterPawn::OnInvisPhoto_Implementation()
 		if (IsValid(component))
 		{
 			IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-			if (filterableComponent)
+			if (filterableComponent != nullptr)
 			{
 				filterableComponent->Execute_OnInvisPhoto(Cast<UObject>(filterableComponent));
 			}
@@ -129,7 +129,7 @@ void AFilterPawn::OnInvisPhotoFinished_Implementation()
 		if (IsValid(component))
 		{
 			IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-			if (filterableComponent)
+			if (filterableComponent != nullptr)
 			{
 				filterableComponent->Execute_OnInvisPhotoFinished(Cast<UObject>(filterableComponent));
 			}
@@ -143,7 +143,7 @@ void AFilterPawn::OnRevealFromInvisibility_Implementation()
 		if (IsValid(component))
 		{
 			IFilterableInterface *filterableComponent = Cast<IFilterableInterface>(component);
-			if (filterableComponent)
+			if (filterableComponent != nullptr)
 			{
 				filterableComponent->Execute_OnRevealFromInvisibility(Cast<UObject>(filterableComponent));
 			}
