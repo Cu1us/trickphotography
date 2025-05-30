@@ -41,3 +41,8 @@ bool APickup::CanBePickedUp_Implementation(bool isCammy)
 {
     return true;
 }
+
+FString APickup::GetPickupID_Implementation()
+{
+    return PickupID;
+}

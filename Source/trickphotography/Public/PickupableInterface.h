@@ -31,4 +31,6 @@ public:
 	bool CanBePickedUp(bool isCammy);
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Interaction")
 	void Activate(FTransform cameraTransform, bool isCammy);
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Interaction")
+	FString GetPickupID();
 };
