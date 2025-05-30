@@ -27,6 +27,8 @@ public:
 	bool VisibleInUV;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Filter Visibility")
 	bool VisibleInXray;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Filter Visibility")
+	bool AlwaysShowInEditor = true;
 
 	//void OnAnyPhoto_Implementation() override;
 	void OnAnyPhotoFinished_Implementation() override;
@@ -36,4 +38,6 @@ public:
 	//void OnUVPhotoFinished_Implementation() override;
 	void OnXrayPhoto_Implementation() override;
 	//void OnXrayPhotoFinished_Implementation() override;
+
+	void OnConstruction(const FTransform &Transform) override;
 };

@@ -29,3 +29,9 @@ void AFilterableDecalActor::OnXrayPhoto_Implementation()
 {
     GetDecal()->SetVisibility(VisibleInXray);
 }
+
+void AFilterableDecalActor::OnConstruction(const FTransform &Transform)
+{
+    Super::OnConstruction(Transform);
+    GetDecal()->SetVisibility(VisibleByPlayer || AlwaysShowInEditor);
+}
