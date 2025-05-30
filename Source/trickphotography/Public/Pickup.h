@@ -31,5 +31,6 @@ protected:
 	void OnPickup_Implementation(bool isCammy) override;
 	void OnDrop_Implementation(bool isCammy) override;
 	bool CanBePickedUp_Implementation(bool isCammy) override;
+	FString GetPickupID_Implementation() override;
 	//void Activate_Implementation(FTransform cameraTransform) override;
 };
