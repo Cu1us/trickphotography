@@ -22,6 +22,7 @@ void UFilterSkeletalMeshComponent::BeginPlay()
         DefaultCollisionType = GetCollisionObjectType();
         SetCollisionObjectType(ECollisionChannel::ECC_GameTraceChannel4);
         SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel3, ECollisionResponse::ECR_Overlap);
+        SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility, ECollisionResponse::ECR_Ignore);
 
         bRenderCustomDepth = true;
         CustomDepthStencilValue = 10;
@@ -182,6 +183,7 @@ void UFilterSkeletalMeshComponent::OnRevealFromInvisibility_Implementation()
         SetVisibility(true);
         SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
         SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel3, ECollisionResponse::ECR_Ignore);
+        SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility, ECollisionResponse::ECR_Block);
 
         bRenderCustomDepth = false;
         CustomDepthStencilValue = 0;
@@ -196,6 +198,7 @@ void UFilterSkeletalMeshComponent::MakeInvisible()
         SetVisibility(false);
         SetCollisionEnabled(ECollisionEnabled::QueryOnly);
         SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel3, ECollisionResponse::ECR_Overlap);
+        SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility, ECollisionResponse::ECR_Ignore);
 
         bRenderCustomDepth = true;
         CustomDepthStencilValue = 10;
