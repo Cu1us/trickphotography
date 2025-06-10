@@ -22,24 +22,24 @@ public:
 	UMaterialInterface *DefaultMaterial;
 	ECollisionChannel DefaultCollisionType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Materials\|Thermal")
+	UPROPERTY(EditAnywhere, BlueprintEditable, Category = "Materials\|Thermal")
 	FilterVisibility ThermalInteraction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Materials\|Thermal")
+	UPROPERTY(EditAnywhere, BlueprintEditable, Category = "Materials\|Thermal")
 	UMaterialInterface *ThermalMaterial;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Materials\|UV")
+	UPROPERTY(EditAnywhere, BlueprintEditable, Category = "Materials\|UV")
 	FilterVisibility UVInteraction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Materials\|UV")
+	UPROPERTY(EditAnywhere, BlueprintEditable, Category = "Materials\|UV")
 	UMaterialInterface *UVMaterial;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Materials\|X-Ray")
+	UPROPERTY(EditAnywhere, BlueprintEditable, Category = "Materials\|X-Ray")
 	FilterVisibility XrayInteraction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Materials\|X-Ray")
+	UPROPERTY(EditAnywhere, BlueprintEditable, Category = "Materials\|X-Ray")
 	UMaterialInterface *XrayMaterial;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Materials\|Invisibility")
+	UPROPERTY(EditAnywhere, BlueprintEditable, Category = "Materials\|Invisibility")
 	bool IsInvisible;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Materials\|Invisibility")
+	UPROPERTY(EditAnywhere, BlueprintEditable, Category = "Materials\|Invisibility")
 	UMaterialInterface *InvisMaterial;
 
 	UFUNCTION(BlueprintCallable, Category = "Filter Interaction")
