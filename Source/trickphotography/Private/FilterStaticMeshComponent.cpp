@@ -87,7 +87,10 @@ void UFilterStaticMeshComponent::OnUVPhoto_Implementation()
     switch (UVInteraction)
     {
     case FilterVisibility::Visible:
-        SetMaterial(0, UVMaterial);
+        if (IsValid(UVMaterial))
+        {
+            SetMaterial(0, UVMaterial);
+        }
         break;
     case FilterVisibility::Hidden:
         SetVisibility(false);
