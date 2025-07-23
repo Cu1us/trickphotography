@@ -13,10 +13,10 @@
 			]
 		},
 		{
-            "Name": "trickphotographyEditor",
-            "Type": "Editor",
-            "LoadingPhase":  "PostEngineInit"
-        }
+			"Name": "trickphotographyEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
 	],
 	"Plugins": [
 		{
@@ -25,6 +25,10 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "CommonUI",
+			"Enabled": true
 		}
 	]
 }
